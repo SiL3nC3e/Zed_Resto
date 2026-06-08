@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #0d0d0d;
+  --color-charcoal-light: #1a1a1a;
+  --color-charcoal-muted: #2a2a2a;
+  --color-gold: #c9a962;
+  --color-gold-light: #dfc88a;
+  --color-gold-dark: #a88b4a;
+  --color-cream: #f5f0e8;
+  --color-cream-dark: #e8e0d4;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-charcoal);
+  color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 50%, var(--color-gold) 100%);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold), var(--color-gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-gold text-charcoal font-medium tracking-wide uppercase text-sm transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 border border-gold/60 text-gold font-medium tracking-wide uppercase text-sm transition-all duration-300 hover:bg-gold/10 hover:border-gold;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-cream/70 text-sm transition-colors hover:text-gold;
+}
+
+.card-luxury {
+  @apply bg-charcoal-light border border-white/5 overflow-hidden transition-all duration-500 hover:border-gold/30 hover:shadow-xl hover:shadow-gold/5;
+}
+
+.input-luxury {
+  @apply w-full bg-charcoal-muted border border-white/10 px-4 py-3 text-cream placeholder:text-cream/30 focus:outline-none focus:border-gold/50 transition-colors;
+}
+
+.section-padding {
+  @apply px-6 py-20 md:px-12 lg:px-20 lg:py-28;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-charcoal);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dark);
+  border-radius: 3px;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "zed-resto",
+  "version": "1.0.0",
+  "description": "Zed-Resto — A classy full-stack restaurant web ecosystem",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "seed:fresh": "npm run seed:fresh --prefix server",
+    "sync-images": "npm run sync-images --prefix server",
+    "build": "npm run build --prefix client",
+    "install:all": "npm install --prefix server && npm install --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
